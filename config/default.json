@@ -1,4 +1,0 @@
-{
-  "mongoURI":"mongodb+srv://dangulo4:ZuU4mQfuUueNvWiq@contactkeeper.hoafu.mongodb.net/ReactContactKeeper?retryWrites=true&w=majority",
-  "jwtSecret":"_doleman$!2021"
-}
