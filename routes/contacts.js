@@ -68,7 +68,7 @@ router.put('/:id', auth, async (req, res) => {
     let contact = await Contact.findById(req.params.id)
     if (!contact) return res.status(404).json({ msg: 'Contact not found' })
 
-    // Check if user's contact
+    // Check if user own's the contact
     if (contact.user.toString() !== req.user.id) {
       return res.status(401).json({ msg: 'Not Authorized' })
     }
@@ -94,7 +94,7 @@ router.delete('/:id', auth, async (req, res) => {
     let contact = await Contact.findById(req.params.id)
     if (!Contact) return res.status(404).json({ msg: 'Contct not found' })
 
-    // Check if user's contact
+    // Check if user own's contact
     if (contact.user.toString() !== req.user.id) {
       return res.status(404).json({ msg: 'Not Authorized' })
     }
