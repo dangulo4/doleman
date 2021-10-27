@@ -37,7 +37,7 @@ const Navbar = ({ title, icon }) => {
         <ul className='nav-links'>
           <li>
             <button className='link-btn' onMouseOver={displaySubmenu}>
-              <Link to='/contacts' style={{ color: 'white' }}>
+              <Link to='/home' style={{ color: 'white' }}>
                 contacts
               </Link>
             </button>

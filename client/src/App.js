@@ -6,26 +6,29 @@ import Sidebar from './components/layouts/Sidebar'
 import Home from './components/pages/Home'
 import About from './components/pages/About'
 import Contacts from './components/pages/Contacts'
-
 import './App.css'
+
+import ContactState from './context/contact/ContactState'
 
 const App = () => {
   return (
-    <Router>
-      <Fragment>
-        <Navbar />
-        <Sidebar />
-        {/* <Submenu /> */}
-        <div className='container'>
-          <Switch>
-            <Route exact path='/' component={Hero} />
-            <Route exact path='/home' component={Home} />
-            <Route exact path='/about' component={About} />
-            <Route exact path='/contacts' component={Contacts} />
-          </Switch>
-        </div>
-      </Fragment>
-    </Router>
+    <ContactState>
+      <Router>
+        <Fragment>
+          <Navbar />
+          <Sidebar />
+          {/* <Submenu /> */}
+          <div className='hero'>
+            <Switch>
+              <Route exact path='/' component={Hero} />
+              <Route exact path='/home' component={Home} />
+              <Route exact path='/about' component={About} />
+              <Route exact path='/contacts' component={Contacts} />
+            </Switch>
+          </div>
+        </Fragment>
+      </Router>
+    </ContactState>
   )
 }
 
