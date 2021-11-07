@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 /*
 =============== 
 Variables
@@ -5,6 +6,11 @@ Variables
 */
 
 :root {
+  --primary-color: #117a65;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
   /* dark shades of primary color*/
   --clr-primary-1: hsl(205, 86%, 17%);
   --clr-primary-2: hsl(205, 77%, 27%);
@@ -58,11 +64,11 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
   background: var(--clr-grey-10);
   color: var(--clr-grey-1);
-  line-height: 1.5;
+  line-height: 1.4;
   font-size: 0.875rem;
 }
 ul {
@@ -120,6 +126,10 @@ p {
   }
 }
 /*  global classes */
+/*Text Styles*/
+.text-primary {
+  color: var(--primary-color);
+}
 
 /* section */
 .section {
@@ -157,6 +167,41 @@ Stripe Styles
   justify-content: space-between;
   align-items: center;
 }
+
+.alert {
+  padding: 0.7rem;
+  margin: 5rem auto;
+  position: fixed;
+  width: 55vw;
+  opacity: 0.9;
+  background: var(--light-color);
+  color: #333;
+}
+
+.btn-primary,
+.bg-primary,
+.badge-primary,
+.alert-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-light,
+.bg-light,
+.badge-light,
+.alert-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.btn-dark,
+.bg-dark,
+.badge-dark,
+.alert-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
 .btn {
   font-size: 1rem;
   padding: 0.25rem 0.75rem;
@@ -170,6 +215,14 @@ Stripe Styles
 }
 .btn:hover {
   background: var(--clr-grey-5);
+}
+
+.btn-danger,
+.bg-danger,
+.badge-danger,
+.alert-danger {
+  background: var(--danger-color);
+  color: #fff;
 }
 .nav-links {
   display: none;
@@ -190,7 +243,7 @@ Stripe Styles
   z-index: -1;
 }
 .hero {
-  position: relative;
+  /* position: relative; */
   min-height: 100vh;
   margin-top: -5rem;
   display: grid;
@@ -234,7 +287,7 @@ Stripe Styles
     display: block;
     justify-self: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
     height: 100%;
     display: grid;
@@ -474,6 +527,90 @@ Stripe Styles
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-gap: 2rem;
+}
+
+/* Login */
+.login {
+  width: 90vw;
+  max-width: var(--max-width);
+  max-height: 20rem;
+  margin: 4rem auto;
+  /* background: var(--clr-white); */
+  border-radius: var(--radius);
+  padding: 3rem;
+}
+.login-small {
+  max-width: 500px;
+}
+
+/*
+=============== 
+Login Form
+===============
+*/
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='date'],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
+input[type='submit'],
+button {
+  font: inherit;
+}
+
+input {
+  margin: 1.2rem 0;
+}
+
+.form-group {
+  margin: 1.2rem 0;
+}
+
+.form-group input {
+  margin: 0.2rem 0;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 9rem auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.form-container h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+.setup-form h2 {
+  margin-bottom: 2rem;
+}
+.form-control {
+  margin-bottom: 2rem;
+}
+.form-control label {
+  display: block;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--clr-grey-3);
+  margin-bottom: 0.5rem;
+}
+.form-input {
+  border: none;
+  background: var(--clr-grey-10);
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  border-radius: var(--radius);
 }
 
 /* Animation Transition Group */

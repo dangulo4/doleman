@@ -1,8 +1,10 @@
 import React from 'react'
 import { useGlobalContext } from '../../context/context'
 import phoneImg from './images/phone.svg'
+import { Link } from 'react-router-dom'
+import Login from '../auth/Login'
 
-const Hero = () => {
+const Hero = (props) => {
   const { closeSubmenu } = useGlobalContext()
 
   return (
@@ -11,14 +13,19 @@ const Hero = () => {
         <article className='hero-info'>
           <h1>Contact Manager infrastructure for your business</h1>
           <p>
-            Millons of companies of all sizes-from startups to Fortune 500-use
-            Stripe's software and APIs to accept payments, send payouts, and
-            manage their business online.
+            Companies of all sizes-from startups to Fortune 500 use Doleman's
+            software and APIs to manage their business online contacts. Register
+            now by cliking below...
           </p>
-          <button className='btn'>Start now</button>
+          <button className='btn'>
+            <Link to='/register' style={{ color: 'white' }}>
+              Start now
+            </Link>
+          </button>
         </article>
         <article className='hero-images'>
-          <img src={phoneImg} className='phone-img' alt='phone' />
+          {/* <img src={phoneImg} className='phone-img' alt='phone' /> */}
+          <Login {...props} />
         </article>
       </div>
     </section>
