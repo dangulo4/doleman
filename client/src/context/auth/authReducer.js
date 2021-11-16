@@ -3,11 +3,10 @@ import {
   REGISTER_FAIL,
   USER_LOADED,
   AUTH_ERROR,
-  LOGIN_SUCESS,
+  LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOGOUT,
   CLEAR_ERRORS,
-  LOGIN_SUCCESS,
 } from '../types'
 
 // eslint-disable-next-line
