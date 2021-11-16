@@ -38,18 +38,6 @@ module.exports.handler = async (event, context, req, res, next) => {
   context.callbackWaitsForEmptyEventLoop = false
 
   const db = await connectionToDatabase(MONGODB_URI)
-  // Get token from header
-  const token = req.header('x-auth-token')
-  // Check for valid token
-  if (!token) {
-    return res.status(401).json({ msg: 'No token, authorization is denied' })
-  }
-  try {
-    const decoded = jwt.verify(token, config.get('jwtSecret'))
-    req.user = decoded.user
-    next()
-  } catch (err) {
-    res.status(401).json({ msg: 'Invalid Token' })
-  }
+
   return queryDatabase(db)
 }
