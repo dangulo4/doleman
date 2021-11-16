@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "prebuild":"echo $MY_SECRET",
+    "prebuild":"echo $jwtSecret",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

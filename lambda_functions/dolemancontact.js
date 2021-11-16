@@ -2,7 +2,7 @@ const MongoClient = require('mongodb').MongoClient
 const jwt = require('jsonwebtoken')
 const config = require('config')
 
-const MONGODB_URI = process.env.MONGO_URI
+const mongoURI = process.env.MONGO_URI
 const DB_NAME = 'contactkeeper'
 
 let cachedDb = null
@@ -37,7 +37,7 @@ module.exports.handler = async (event, context, req, res, next) => {
   // we keep the DB connection alive
   context.callbackWaitsForEmptyEventLoop = false
 
-  const db = await connectionToDatabase(MONGODB_URI)
+  const db = await connectionToDatabase(mongoURI)
 
   return queryDatabase(db)
 }
