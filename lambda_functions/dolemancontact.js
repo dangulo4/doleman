@@ -32,7 +32,7 @@ const queryDatabase = async (db) => {
   }
 }
 
-module.exports.handler = async (event, context) => {
+module.exports.handler = async (event, context, req, res, next) => {
   // otherwise the connection will never complete, since
   // we keep the DB connection alive
   context.callbackWaitsForEmptyEventLoop = false
