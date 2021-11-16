@@ -1,6 +1,4 @@
 const MongoClient = require('mongodb').MongoClient
-const jwt = require('jsonwebtoken')
-const config = require('config')
 
 const mongoURI = process.env.MONGO_URI
 const DB_NAME = 'contactkeeper'
