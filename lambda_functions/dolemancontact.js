@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient
 
 const mongoURI = process.env.MONGO_URI
-const DB_NAME = 'contactkeeper'
+const DB_NAME = 'ReactContactKeeper'
 
 let cachedDb = null
 
