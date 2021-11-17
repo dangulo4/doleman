@@ -15,7 +15,7 @@ import {
   CLEAR_CONTACTS,
   CLEAR_FILTER,
   CONTACT_ERROR,
-} from '../types'
+} from '../types.js'
 
 // Create initial state
 const ContactState = (props) => {
