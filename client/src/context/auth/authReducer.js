@@ -7,7 +7,7 @@ import {
   LOGIN_FAIL,
   LOGOUT,
   CLEAR_ERRORS,
-} from '../types.js'
+} from '../types'
 
 // eslint-disable-next-line
 export default (state, action) => {
