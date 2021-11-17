@@ -1,4 +1,4 @@
-import { SET_ALERT, REMOVE_ALERT } from '../types'
+import { SET_ALERT, REMOVE_ALERT } from '../types.js'
 
 // eslint-disable-next-line
 export default (state, action) => {
