@@ -36,7 +36,7 @@ module.exports.handler = async (event, context) => {
   // we keep the DB connection alive
   context.callbackWaitsForEmptyEventLoop = false
 
-  const db = await connectionToDatabase(mongoURI)
+  const db = await connectToDatabase(mongoURI)
 
   return queryDatabase(db)
 }
