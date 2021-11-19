@@ -17,7 +17,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "./node_modules/.bin/netlify-lambda serve src",
     "build": "react-scripts build",
     "prebuild": "echo $jwtSecret",
     "test": "react-scripts test",
