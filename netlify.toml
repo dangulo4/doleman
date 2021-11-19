@@ -1,6 +1,9 @@
 [build]
-publish = "/build" 
+publish = "build/" 
 functions= "lambda_functions/"
-
+[[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
 
 
