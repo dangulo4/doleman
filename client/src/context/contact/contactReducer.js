@@ -9,7 +9,7 @@ import {
   CLEAR_FILTER,
   CONTACT_ERROR,
   CLEAR_CONTACTS,
-} from '../types.js'
+} from '../types'
 
 //eslint-disable-next-line
 export default (state, action) => {
