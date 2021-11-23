@@ -31,7 +31,7 @@ const ContactItem = ({ contact }) => {
       <ul className='list'>
         {email && (
           <li>
-            <FaRegAddressCard /> {email}
+            <FaRegAddressCard /> <a href={`mailto:${email}`}>{email}</a>
           </li>
         )}
         {phone && (
