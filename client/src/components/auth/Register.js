@@ -11,7 +11,7 @@ const Register = (props) => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      props.history.push('/home')
+      props.history.push('/contacts')
     }
     if (error === 'User with email already exists') {
       setAlert(error, 'danger')
